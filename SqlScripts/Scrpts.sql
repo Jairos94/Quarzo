@@ -35,4 +35,11 @@ INSERT INTO coProducto(cNombProdu,nPrecioProd,nIdCategori) VALUES   ('Escritorio
 
 go
 
-CREATE PROCEDURE  
+CREATE PROCEDURE  Usp_Sel_Co_Productos
+ @idCategoria int 
+	AS
+    BEGIN
+	  SELECT P.* FROM coProducto P
+	  WHERE P.nIdCategori=@idCategoria
+   END
+GO

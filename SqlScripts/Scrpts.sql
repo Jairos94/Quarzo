@@ -43,3 +43,11 @@ CREATE PROCEDURE  Usp_Sel_Co_Productos
 	  WHERE P.nIdCategori=@idCategoria
    END
 GO
+
+CREATE PROCEDURE Usp_Ins_Co_Categoria
+ @cNombCateg VARCHAR(50),
+ @cEsActiva INT
+  AS
+  BEGIN
+    INSERT INTO coCategoria(cNombCateg,cEsActiva) VALUES(@cNombCateg,@cEsActiva)
+  END
